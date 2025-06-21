@@ -24,13 +24,13 @@ const Header = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png" 
               alt="Foundation Logo" 
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
           </Link>
 
