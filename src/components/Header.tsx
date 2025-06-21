@@ -26,16 +26,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png" 
-              alt="Bashir Educational Scholarship Trust" 
-              className="h-12 w-auto"
+              alt="Foundation Logo" 
+              className="h-16 w-auto"
             />
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-foundation-navy">BEST Foundation</h1>
-              <p className="text-sm text-foundation-gray-600">Bashir Educational Scholarship Trust</p>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
