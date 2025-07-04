@@ -8,9 +8,9 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Impact of Daheg Support on Rural Communities",
-      excerpt: "Exploring how our daheg program has transformed the nutritional landscape for families in rural areas.",
-      category: "Daheg",
+      title: "The Impact of Dahej Support on Rural Communities",
+      excerpt: "Exploring how our Dahej program has transformed the nutritional landscape for families in rural areas.",
+      category: "Dahej",
       date: "December 15, 2024",
       image: "https://images.unsplash.com/photo-1517022812141-23620dba5c23",
       readTime: "5 min read"
@@ -64,7 +64,7 @@ const Blog = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Daheg': return <Heart className="h-4 w-4" />;
+      case 'Dahej': return <Heart className="h-4 w-4" />;
       case 'Education': return <BookOpen className="h-4 w-4" />;
       case 'Qurbani': return <Users className="h-4 w-4" />;
       case 'Welfare': return <Heart className="h-4 w-4" />;
@@ -74,7 +74,7 @@ const Blog = () => {
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Daheg': return 'bg-foundation-red text-white';
+      case 'Dahej': return 'bg-foundation-red text-white';
       case 'Education': return 'bg-foundation-navy text-white';
       case 'Qurbani': return 'bg-foundation-green text-white';
       case 'Welfare': return 'bg-foundation-gold text-white';

@@ -152,10 +152,10 @@ const Contact =() => {
                   <Button className="w-full bg-foundation-red hover:bg-foundation-red/90">
                     Make a Donation
                   </Button>
-                  <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-foundation-navy">
+                  <Button variant="outline" className="w-full border-white text-white hover:bg-white text-foundation-navy">
                     Volunteer with Us
                   </Button>
-                  <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-foundation-navy">
+                  <Button variant="outline" className="w-full border-white text-white hover:bg-white text-foundation-navy">
                     Apply for Support
                   </Button>
                 </div>
