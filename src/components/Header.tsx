@@ -44,7 +44,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <motion.img
-              src="/lovable-uploads/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png"
+              src="/images/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png"
               alt="Foundation Logo"
               className="h-16 w-auto navbar-logo"
               initial={{ opacity: 0 }}

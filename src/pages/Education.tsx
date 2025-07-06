@@ -7,22 +7,15 @@ import { motion } from "framer-motion";
 const Education = () => {
   const stats = [
     {
-      title: "New Scholarships",
-      count: 25,
-      period: "This Week",
-      icon: <BookOpen className="h-6 w-6" />,
-      color: "red" as const,
-    },
-    {
       title: "Scholarships Awarded",
-      count: 156,
+      count: 40,
       period: "This Month",
       icon: <BookOpen className="h-6 w-6" />,
       color: "green" as const,
     },
     {
       title: "Students Supported",
-      count: 892,
+      count: 183,
       period: "This Year",
       icon: <BookOpen className="h-6 w-6" />,
       color: "navy" as const,
@@ -33,6 +26,39 @@ const Education = () => {
       period: "All Time",
       icon: <BookOpen className="h-6 w-6" />,
       color: "gold" as const,
+    },
+  ];
+
+  const galleryImages = [
+    {
+      src: "/images/Education1.jpeg",
+      alt: "Students attending class",
+      caption: "Celebrating student achievements and scholarships",
+    },
+    {
+      src: "/images/Education2.jpeg",
+      alt: "Student with a scholarship certificate",
+      caption: "Fostering learning environments for every child",
+    },
+    {
+      src: "/images/Education3.jpeg",
+      alt: "Students studying together",
+      caption: "Collaborative learning supported by our programs",
+    },
+    {
+      src: "/images/Education4.jpeg",
+      alt: "Young student reading a book",
+      caption: "Empowering students through access to education",
+    },
+    {
+      src: "/images/Education5.jpeg",
+      alt: "Graduates holding diplomas",
+      caption: "Helping students graduate and succeed in life",
+    },
+    {
+      src: "/images/Education6.jpeg",
+      alt: "Scholarship distribution to students",
+      caption: "Empowering bright minds through scholarship support",
     },
   ];
 
@@ -58,7 +84,7 @@ const Education = () => {
       {/* Stats Section */}
       <section className="py-12 -mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {stats.map((stat, index) => (
               <StatsCard key={index} {...stat} />
             ))}
@@ -76,24 +102,26 @@ const Education = () => {
                 Transforming Lives Through Education
               </h2>
               <p className="text-foundation-gray-700 mb-4">
-                Education is the foundation of progress. Our scholarship program
-                provides financial support to deserving students who demonstrate
-                academic excellence but lack the resources to pursue their
-                dreams.
+                Bashir Educational Scholarship Trust (BEST) was established in
+                2004 to provide financial assistance to talented but
+                underprivileged students. Starting with just 20 scholarships,
+                the Trust has gradually expanded its reach.
               </p>
               <p className="text-foundation-gray-700 mb-6">
-                From primary school to university level, we support students
-                across all educational stages, ensuring that financial
-                constraints never become a barrier to learning and growth.
+                Over the years, award ceremonies have been held, and the number
+                of beneficiaries has grown significantly. With funding from
+                generous individuals, including Mr. Bashir Ahmad Khan and
+                overseas supporters, the Trust has enabled many students to
+                continue their studies without financial barriers.
               </p>
               <div className="bg-foundation-navy/10 border-l-4 border-foundation-navy p-4 rounded">
                 <p className="text-foundation-navy font-semibold">
                   Success Story:
                 </p>
                 <p className="text-foundation-gray-700">
-                  This year, 45 of our scholarship recipients graduated from
-                  university, with 38 securing employment in their chosen
-                  fields.
+                  The third award ceremony saw 35 scholarships distributed. With
+                  increasing demand, the Trust now plans to expand to 40
+                  scholarships in upcoming phases.
                 </p>
               </div>
             </div>
@@ -101,7 +129,7 @@ const Education = () => {
             {/* Right Column - Image with Scroll Animation */}
             <div className="animate-scale-in">
               <motion.img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                src="/images/Education.jpg"
                 alt="Student studying"
                 className="rounded-lg shadow-lg w-full h-auto lg:h-full object-cover"
                 initial={{ opacity: 0, scale: 0.95, y: 50 }}
@@ -174,6 +202,56 @@ const Education = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Our Impact in Pictures */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-extrabold text-foundation-navy mb-4">
+              Our Impact in Pictures
+            </h2>
+            <p className="text-xl text-foundation-gray-600 max-w-3xl mx-auto">
+              See how your support transforms educational journeys across
+              Pakistan.
+            </p>
+          </motion.div>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {galleryImages.map((image, index) => (
+              <motion.div
+                key={index}
+                className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <p className="text-white text-sm font-medium p-4">
+                    {image.caption}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

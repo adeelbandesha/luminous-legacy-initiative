@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, BookOpen, Users, Calendar } from "lucide-react";
+import { Heart, BookOpen, Users, Calendar, Stethoscope, HeartPulse } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
@@ -20,13 +20,13 @@ const Index = () => {
       stats: "15,420 families supported",
     },
     {
-      title: "Qurbani Program",
+      title: "Health & Medical Support",
       description:
-        "Facilitating sacred Qurbani rituals and distributing meat to those in need.",
-      icon: <Users className="h-8 w-8" />,
-      link: "/qurbani",
-      color: "bg-foundation-green",
-      stats: "4,280 animals sacrificed",
+        "Providing medical aid, health camps, and awareness programs to underserved communities.",
+      stats: "482 beneficiaries this month",
+      icon: <HeartPulse className="h-6 w-6" />, // You can import or use a suitable icon
+      color: "bg-green-600",
+      link: "/health",
     },
     {
       title: "Education Scholarships",
@@ -151,11 +151,16 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {impactStats.map((stat, index) => {
-              const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+              const { ref, inView } = useInView({
+                triggerOnce: true,
+                threshold: 0.5,
+              });
               return (
                 <div key={index} ref={ref} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-foundation-gold mb-2">
-                    {inView && <CountUp end={stat.end} duration={2.5} separator="," />}
+                    {inView && (
+                      <CountUp end={stat.end} duration={2.5} separator="," />
+                    )}
                   </div>
                   <div className="text-foundation-gray-200">{stat.label}</div>
                 </div>

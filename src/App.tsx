@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +12,11 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Health from "./pages/Health";
+import History from "./pages/History";
+import DahejBlog from "./pages/DahejBlog";
+import EducationBlog from "./pages/EducationBlog";
+import HealthBlog from "./pages/HealthBlog";
+import WelfareBlog from "./pages/WelfareBlog";
 
 const queryClient = new QueryClient();
 
@@ -29,8 +33,14 @@ const App = () => (
           <Route path="/education" element={<Education />} />
           <Route path="/welfare" element={<Welfare />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/history" element={<History />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/dahej/:id" element={<DahejBlog />} />
+          <Route path="/blog/education/:id" element={<EducationBlog />} />
+          <Route path="/blog/health/:id" element={<HealthBlog />} />
+          <Route path="/blog/welfare/:id" element={<WelfareBlog />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="lg:col-span-2 flex flex-col items-center md:items-start">
             <div className="flex items-center space-x-4 mb-6 justify-center md:justify-start">
               <img
-                src="/lovable-uploads/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png"
+                src="/images/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png"
                 alt="BEST Foundation"
                 className="h-20 w-20 bg-white rounded-full p-2 shadow-md"
               />

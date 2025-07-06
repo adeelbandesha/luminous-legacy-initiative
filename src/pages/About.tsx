@@ -66,7 +66,7 @@ const About = () => {
             </div>
             <div className="animate-scale-in">
               <img 
-                src="/lovable-uploads/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png" 
+                src="/images/18b1de3d-c6ac-467e-b9e0-2f4f8ed59bc5.png" 
                 alt="BEST Foundation Logo" 
                 className="w-full max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg"
               />

@@ -167,3 +167,12 @@ header.shadow-lg {
 .menu-icon BaseType: {
   transform: rotate(90deg);
 }
+
+.urdu-section {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 2;
+  font-size: 1.125rem;
+}
+
